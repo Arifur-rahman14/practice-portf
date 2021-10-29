@@ -136,6 +136,7 @@ section .about .container .social a img{
     color: var(--secondary);
     text-align: center;
     margin-bottom: 4rem;
+    margin-top: 4rem;
     line-height: 0.5;
 }
 .section-heading span{
@@ -191,6 +192,7 @@ section.freelancer{
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/images/camera.png);
     color: white;
     padding-bottom: 14rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 100% 99%, 86% 85%, 15% 85%, 0 100%, 0% 85%);
 }
 section.freelancer h1{
     font-size: 2rem;
@@ -203,7 +205,7 @@ section.freelancer p{
     margin-bottom: 2rem;
 }
 section.review{
-    height: 600px;
+    /* height: 600px; */
 }
 
 section.review .slider .slide img{
@@ -250,4 +252,102 @@ section.review .dots li.slick-active button{
     background: var(--primary);
     width: 20px;
     transition: all .3s ease;
+}
+section.work{
+    background: var(--light);
+}
+section.work .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+}
+section.work .card-wrapper .card{
+    position: relative;
+    height: 250px;
+}
+section.work .card-wrapper .card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61, 207, 211, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    opacity: 0;
+    transition: all .9s ease;
+}
+section.work .card-wrapper .card .overlay:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+section.work .card-wrapper .card .overlay a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+section.work .card-wrapper .card img{
+    height: 100%;
+    width: 100%;
+}
+section.blog{
+    background: var(--dark);
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 100% 99%, 86% 85%, 15% 85%, 0 100%, 0% 85%); */
+}
+section.blog .container{
+    color: var(--pure);
+    margin-top: 2rem;
+}
+section.blog .container .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+section.blog .container .card-wrapper .card{
+    background: var(--secondary);
+    border-radius: 10px;
+    padding: 1.4rem;
+}
+section.blog .container .card-wrapper .card .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.blog .container .section-heading{
+    margin-top: 5rem!important;
+}
+section.contact{
+    height: 300px;
+}
+section.contact .container .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+footer.footer{
+    background: var(--dark);
+}
+footer.footer .container .heading{
+    text-align: center;
+    padding-top: 4rem;
+    color: var(--primary);
+}
+footer.footer .container .card-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+footer.footer .container .card-wrapper .card img{
+    margin-right: 2rem;
+}
+footer.footer .container p{
+    color: var(--light);
+    text-align: center;
+    text-decoration: uppercase;
 }
