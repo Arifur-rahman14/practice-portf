@@ -17,9 +17,17 @@
     font-family: 'Poppins', sans-serif;
 
 }
+
+html{
+    scroll-behavior: smooth;
+}
 header{
     background-color:var(--dark);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 89% 87%, 11% 87%, 0 100%);
+}
+section{
+    padding-top: 0.8rem;
+    margin-top: 0.5rem;
 }
 @media only screen and (max-width: 837px) {
     header{
@@ -33,6 +41,26 @@ header{
     max-width: 1152px;
     padding: 0 15px;
     margin: 0 auto;
+}
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
 }
 header nav .left a{
     color: var(--light);
@@ -320,7 +348,7 @@ section.blog .container .section-heading{
     margin-top: 5rem!important;
 }
 section.contact{
-    height: 300px;
+    /* height: 300px; */
 }
 section.contact .container .card-wrapper{
     display: grid;
@@ -328,6 +356,36 @@ section.contact .container .card-wrapper{
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+section.contact .input-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+section.contact .input-wrap input{
+    border: 1px solid var(--turnery);
+}
+section.contact .input-wrap-2{
+    display: flex;
+    flex-direction: column;
+}
+section.contact .input-wrap-2 input{
+    margin-bottom: 0.5rem;
+}
+section.contact .input-wrap-2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--turnery);
+}
+section.contact input{
+    padding: 0.5rem;
+}
+section.contact .form{
+    margin: 4rem 0;
+}
+section.contact .form .new-btn{
+    text-align: center;
+    margin-top: 1.5rem;
 }
 footer.footer{
     background: var(--dark);
@@ -350,4 +408,159 @@ footer.footer .container p{
     color: var(--light);
     text-align: center;
     text-decoration: uppercase;
+}
+
+@media (max-width: 1024px){
+    header #main-nav{
+        display: none;
+    }
+}
+.site-main-wrapper{
+    position: relative;
+}
+.hamberger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.hamberger img{
+    width: 30px;
+}
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--light);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+}
+.open{
+    transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.times img{
+    width: 30px;
+}
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+}
+@media (max-width: 1024px){
+    header #main-nev{
+        display: none;
+    }
+    .hamberger{
+        display: block;
+    }
+    .hero .right img{
+        width: 260px;
+    }
+    .hero .left h1{
+        font-size: 3rem;
+    }
+    .hero{
+        padding-top: 10rem;
+    }
+    .about{
+        margin-top: 2rem;
+    }
+    section{
+        padding: 2rem 0;
+    }
+    section.about .about-me-img{
+        height: 360px;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.blog .container .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 576px){
+    /* .hero .left{
+        position: absolute;
+        top: 260px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    }
+    .hero .right{
+        margin-top: -5rem;
+        margin-right: -8rem;
+        padding-bottom: 4rem;
+    } */
+    .about{
+        margin-top: 2rem;
+        /* background: var(--dark); */
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .about .right .social{
+        justify-content: center;
+    }
+    section{
+        padding: 4rem 0;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.freelancer h1{
+        line-height: 1.2;
+    }
+    section.freelancer{
+        clip-path: polygon(0 6%, 100% 0, 100% 89%, 0% 100%);
+        /* padding: 2rem 0; */
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.contact .container .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.contact .input-wrap{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
