@@ -17,6 +17,9 @@ Used Language:
 <hr>
 <br>
 ![practice-portf](./images/final.jpeg)
+![practice-portf](./images/final.jpeg)
+<br>
+<hr>
 
 #Responsive
 <br>
