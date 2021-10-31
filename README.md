@@ -1,24 +1,18 @@
 # practice portfolio project
 # Author: Arifur Rahman
+
+
 Used Language:
 <li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
 
 
-# Show Project Sample in first time
-![practice-portf](./images/0.0.10.jpeg)
-
-<br>
-<hr>
-<br>
-Before Responsive Or Complete This Project || Middle Of Work
-
-![practice-portf](./images/0.1.0.jpeg)
 
 <br>
 <br>
-Project Completed
+<br>
+# Project screen short
 <br>
 <hr>
 <br>
